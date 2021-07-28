@@ -1,113 +1,22 @@
 html, body{
-    background-color: rgb(124, 70, 45);
+    background: rgb(8,0,81);
+    background: radial-gradient(circle, rgba(8,0,81,1) 0%, rgba(34,0,46,1) 100%);
     margin: 0px;
     padding: 0px;
 }
-h1{
-    color: rgb(255, 255, 255);
-    font-family: 'Russo One', sans-serif;
-    font-size: 40px;
-    text-align: center;
-}
-#span{
-    color: rgb(255, 255, 255);
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
-    text-align: center;
-    padding: 0px;
-}
 #top{
-    background-color: rgb(58, 37, 6);
-    border-bottom: rgb(184, 184, 184) 2px solid;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
+    text-align: center;
+    border-bottom: 3px solid rgb(255,255,255)
 }
-#menu{
-    background-color: rgb(58, 37, 6);
-    border: rgb(184, 184, 184) 2px solid;
-    padding-top:100px;
-    top:130px;
-    width:35%;
-    z-index:100;
+#title{
+    font-size: 90px;
+    color: rgb(255,255,255)
 }
-p{
-    color: rgb(208, 208, 255);
-    font-family: 'Russo One', sans-serif;
-    font-size:20px;
-}
-#rg{
-    position: absolute;
-    top: 80px;
-    right: 0;
-    border: 3px solid rgb(255, 255, 255);
-    margin-right:5px;
-}
-#sd{
-    position: absolute;
-    right: 0;
-    border: 3px solid rgb(255, 255, 255);
-    top: 450px;
-    margin-right:5px;
+h1{
+    font-family: 'Lobster', cursive;
 }
 
-@media only screen and (max-width: 1000px) {
-    h1{
-        font-size: 25px;
-    }
-    #span{
-        font-size: 20px;
-    }
-    #menu{
-        width:40%;
-        padding-top:60px;
-    }
-    p{
-        font-size:15px;
-    }
-    #rg{
-        height:250px;
-        width:350px;
-    }
-    #sd{
-        height:250px;
-        width:350px;
-        top: 380px;
-    }
-    }
-    @media only screen and (max-width: 750px) {
-    #rg{
-        height:180px;
-        width:250px;
-    }
-    #sd{
-        height:180px;
-        width:250px;
-        top: 300px;
-    }
-    }
-    @media only screen and (max-width: 500px) {
-    h1{
-        font-size: 20px;
-    }
-    #span{
-        font-size: 13px;
-    }
-    #menu{
-        width:55%;
-        padding-top:50px;
-    }
-    p{
-        font-size:15px;
-    }
-    #rg{
-        height:100px;
-        width:150px;
-    }
-    #sd{
-        height:100px;
-        width:150px;
-        top: 200px;
-    }
-    }
+
+@media only screen and (max-width: 500px) {
+
+}
