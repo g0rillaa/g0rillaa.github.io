@@ -6,16 +6,44 @@ html, body{
 }
 #top{
     text-align: center;
-    border-bottom: 3px solid rgb(255,255,255)
+    height: 160px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 #title{
     font-size: 90px;
-    color: rgb(255,255,255)
+    color: rgb(255,255,255);
+    margin-top: 10px;
+    border-bottom: 5px solid rgb(124, 124, 124);
+    border-radius: 7px;
+    width: 80%;
 }
 h1{
-    font-family: 'Lobster', cursive;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
 }
-
+#bottom{
+    background-color: rgb(27, 27, 27);
+    height: 120px;
+    width: 90%;
+    bottom:-50px;
+    left:5%;
+    border-radius: 40px;
+    position: fixed;
+}
+#socials{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.socialImg{
+    padding:10px
+}
+.socialImg:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.1);
+}
 
 @media only screen and (max-width: 500px) {
 
