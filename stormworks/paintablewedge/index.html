@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Stormworks Paintable Wedge Generator | Gorillaa">
+    <meta name="theme-color" content="#0b0071">
+    <title>Paintable Wedge Generator</title>
+    <script src='generate.js'></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <h1>Stormworks Paintable Block --> Wedge</h1>
+    <div>
+        <p>Step 1: Select Size:</p>
+        <input type="range" min="1" max="4" value="1" id="slider" id="size">
+        <p id='sizeTxt'>1x1</p>
+    </div>
+    <div>
+        <p>Step 2: Upload Vehicle File (just a singular paintable block with the design you want)</p>
+        <input type="file" id="fileToLoad"></td>
+    </div>
+    <div>
+        <p>Step 3: Press Generate</p>
+        <button type="button" onclick='loadFileAsText()'>Generate</button>
+        <p id='genState'>Waiting For File</p>
+    </div>
+    <div>
+        <p>Step 4: Drag downloaded file into vehicles folder and replace</p>
+    </div>
+
+    <h1>THIS DONT WORK YET BTW</h1>
+    <p>looks like a 1990's website cuz i cant be fucked to do css (yet)</p>
+</body>
+</html>
