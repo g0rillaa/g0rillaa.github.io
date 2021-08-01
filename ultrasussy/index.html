@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shhhh</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+<body>
+    <img id="img" src='img.jpg' onclick="togglePwd()" width="200px">
+    <div id='pwdContainer'>
+        <p>Enter Password</p>
+        <input type="text" id="pwdInput">
+        <button id="goButton" onclick="send()">Go</button>
+    </div>
+</body>
+<style>
+    body{
+        background-color: rgb(0,0,0);
+    }
+    img{
+        position: absolute;
+        top:70%;
+    }
+    #pwdContainer{
+        opacity: 0%;
+        border: 3px solid white;
+        border-radius: 20px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 200px;
+        text-align: center;
+    }
+    p{
+        color: white;
+        font-size: 40px;
+    }
+</style>
+<script>
+
+i=0
+setInterval(() => {
+    i=i+0.01
+    var w = document.body.clientWidth
+    dist = (Math.sin(i*5))*(w/2.5)+(w/2)
+    document.getElementById(`img`).style.left = `${dist-100}px`
+},10)
+
+function send(){
+    // var xmlHttp = new XMLHttpRequest();
+    // xmlHttp.onreadystatechange = function() { 
+    //     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+    //         console.log(xmlHttp.responseText)
+    //     }
+    // }
+    // //xmlHttp.open("GET", 'https://test.gorillaa.net/node/bsbsmppwd', true);
+    // xmlHttp.open("GET", 'localhost:4000/bsbsmppwd', true);
+    // var password = document.getElementById(`pwdInput`)
+    // xmlHttp.send(password.value);
+    var password = document.getElementById(`pwdInput`).value
+    if(password=='G89HN28HBGNI127'){
+        window.open("https://gorillaa.net/bunnings");
+    } else {
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }
+}
+
+
+function togglePwd(){
+    document.getElementById(`pwdContainer`).style.opacity = `100%`
+}
+
+
+
+
+</script>
+</html>
