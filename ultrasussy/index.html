@@ -54,7 +54,10 @@ setInterval(() => {
     document.getElementById(`img`).style.left = `${dist-100}px`
 },10)
 
-function send(){
+async function send(){
+    var password = document.getElementById(`pwdInput`).value
+    var hash = await sha256(password)
+    console.log(hash)
     // var xmlHttp = new XMLHttpRequest();
     // xmlHttp.onreadystatechange = function() { 
     //     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
@@ -65,8 +68,8 @@ function send(){
     // xmlHttp.open("GET", 'localhost:4000/bsbsmppwd', true);
     // var password = document.getElementById(`pwdInput`)
     // xmlHttp.send(password.value);
-    var password = document.getElementById(`pwdInput`).value
-    if(password=='G89HN28HBGNI127'){
+    
+    if(hash=='251e9401eb4b2057da8999092fb144c2355667e3b74e7a8e29cbc29174ebbdb8'){
         window.open("https://gorillaa.net/bunnings");
     } else {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
@@ -78,8 +81,12 @@ function togglePwd(){
     document.getElementById(`pwdContainer`).style.opacity = `100%`
 }
 
-
-
-
+async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);                    
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));                  
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+}
 </script>
 </html>
