@@ -57,22 +57,21 @@ setInterval(() => {
 async function send(){
     var password = document.getElementById(`pwdInput`).value
     var hash = await sha256(password)
-    // var xmlHttp = new XMLHttpRequest();
-    // xmlHttp.onreadystatechange = function() { 
-    //     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-    //         console.log(xmlHttp.responseText)
-    //     }
-    // }
-    // //xmlHttp.open("GET", 'https://test.gorillaa.net/node/bsbsmppwd', true);
-    // xmlHttp.open("GET", 'localhost:4000/bsbsmppwd', true);
-    // var password = document.getElementById(`pwdInput`)
-    // xmlHttp.send(password.value);
-    
-    if(hash=='251e9401eb4b2057da8999092fb144c2355667e3b74e7a8e29cbc29174ebbdb8'){
-        window.open("https://gorillaa.net/bunnings");
-    } else {
-        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    console.log(hash)
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            var res = xmlHttp.responseText
+            if(res=='no'){
+                window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            } else {
+                window.open(`https://${res}`);
+            }
+        }
     }
+    xmlHttp.open("GET", `https://test.gorillaa.net/node/api/pwdbruh?${hash}`, true);
+    var password = document.getElementById(`pwdInput`)
+    xmlHttp.send(null);
 }
 
 
