@@ -57,7 +57,6 @@ setInterval(() => {
 async function send(){
     var password = document.getElementById(`pwdInput`).value
     var hash = await sha256(password)
-    console.log(hash)
     // var xmlHttp = new XMLHttpRequest();
     // xmlHttp.onreadystatechange = function() { 
     //     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
