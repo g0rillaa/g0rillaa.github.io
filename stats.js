@@ -1,7 +1,8 @@
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.onreadystatechange = function() { 
     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-        console.log(xmlHttp.responseText)
+        var e = document.getElementById(`visits`)
+        e.innerHTML = `Visits: ${xmlHttp.responseText}`
     }
 }
 xmlHttp.open("GET", 'https://test.gorillaa.net/node/api/visits', true);
