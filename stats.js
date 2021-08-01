@@ -4,5 +4,5 @@ xmlHttp.onreadystatechange = function() {
         console.log(xmlHttp.responseText)
     }
 }
-xmlHttp.open("GET", 'http://149.28.168.158:19264/visits', true);
+xmlHttp.open("GET", 'https://149.28.168.158:19264/visits', true);
 xmlHttp.send(null);
