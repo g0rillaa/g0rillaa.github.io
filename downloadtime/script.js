@@ -29,6 +29,7 @@ setInterval(() => {
     } else {
         if(sizeType=='Kb'){sizeNumber = sizeNumber/1000}
         if(sizeType=='Gb'){sizeNumber = sizeNumber*1000}
+        if(sizeType=='Gb'){sizeNumber = sizeNumber*1000000}
         if(speedType=='Kbps'){speedNumber = speedNumber/8000}
         if(speedType=='Mbps'){speedNumber = speedNumber/8}
         if(speedType=='Gbps'){speedNumber = speedNumber*125}
