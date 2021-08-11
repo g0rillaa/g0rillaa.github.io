@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Quickly Calculate Download Time">
+    <meta name="theme-color" content="#0b0071">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <title>Download Time Calculator</title>
+    <script src='script.js'></script>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div id='container'>
+        <div id='top'>
+            <h1 id='title'>Download Time Calculator</h1>
+        </div>
+        <div id='body'>
+            <div id='inputContainer'>
+                <div id='sizeContainer' class='section'>
+                    <input id="sizeInput" type="number" value="0">
+                    <div class="dropdown">
+                        <button class="dropbtn" id='sizeTxt'>Gb ></button>
+                        <div class="dropdown-content">
+                            <p onclick='setSizeType("Kb")'>Kb</p>
+                            <p onclick='setSizeType("Mb")'>Mb</p>
+                            <p onclick='setSizeType("Gb")'>Gb</p>
+                            <p onclick='setSizeType("Tb")'>Tb</p>
+                        </div>
+                    </div>
+                </div>
+                <div id='speedContainer' class='section'>
+                    <input id="speedInput" type="number" value="0">
+                    <div class="dropdown">
+                        <button class="dropbtn" id='speedTxt'>Mbps ></button>
+                        <div class="dropdown-content">
+                            <p onclick='setSpeedType("Kbps")'>Kbps</p>
+                            <p onclick='setSpeedType("Mbps")'>Mbps</p>
+                            <p onclick='setSpeedType("Gbps")'>Gbps</p>
+                            <p onclick='setSpeedType("Kb/s")'>Kb/s</p>
+                            <p onclick='setSpeedType("Mb/s")'>Mb/s</p>
+                            <p onclick='setSpeedType("Gb/s")'>Gb/s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id=result>...</p>
+        </div>
+    </div>
+</body>
+</html>
