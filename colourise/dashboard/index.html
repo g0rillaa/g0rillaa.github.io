@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Colourise Web Dashboard">
+    <meta name="theme-color" content="#0b0071">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Colourise Dashboard</title>
+    <script src='script.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id='loginScreen'>
+        <div id='loginBox'>
+            <h1 id='loginCode' onclick='copyCode()'>...</h1>
+            <p id='loginTxt'>DM this code to the bot to authorise.</p>
+            <p id='clickToCopy' onclick='copyCode()'>Click To Copy</p>
+        </div>
+    </div>
+    <div id='serverInfoScreen'>
+        <div id='serverInfoBox'>
+            <h1 id='loginCode'>Configuring Servers</h1>
+            <p id='loginTxt'>You need to have the manage server permission for the server to show up here. If the server is still not showing up try sending a message in it. Make sure the bot has access to the channel where you send the message.</p>
+            <button id='closeButton' onclick='closeServerInfoWindow()'>Ok</button>
+        </div>
+    </div>
+    <div id='serverList'></div>
+    <div id='topBar'>
+        <div id='accountInfo'>
+            <img id='userImg' width="50px">
+            <p id='userTxt'>Logging In...</p>
+            <p id='logoutTxt' onclick='logout()'>Log Out</p>
+        </div>
+    </div>
+    <div id='body'>
+        <h1 id='whichServer' class='headingTxt'>Click on a server to configure it</h1>
+        <div id='reactionMsgDiv'>
+            <p id='reactionMsgTxt' class='headingTxt'>Reaction Message</p>
+            <div id='reactionMsgDropdown'>
+                <p id='channelSelector' onclick='toggleChannelList()'>Select Channel</p>
+                <div id='channelSelectorItems'></div>
+            </div>
+            <button id='channelActionButton' onclick='runChannelAction()'>Send Message</button>
+        </div>
+        <div id='darkScreen'></div>
+    </div>
+    <p id='siteInDev'>Site In Development</p>
+</body>
+</html>
