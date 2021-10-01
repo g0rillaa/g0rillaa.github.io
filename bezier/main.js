@@ -27,10 +27,15 @@ window.requestAnimationFrame(function loop() {
     ctx.fillStyle = `#ffffff`
     ctx.font = "20px Arial";
     ctx.fillText(`${fps} fps`, 5, 20);
-    ctx.fillText(`${points.length} nodes`, 100, 20);
+    ctx.fillText(`${points.length} nodes`, 80, 20);
     ctx.fillText(`click to animate`, 5, 60);
-    if(points.length==0){ctx.fillText(`click anywhere to add a node`, 5, canvas.height-30)} else {
+    if(points.length==0){
+        ctx.fillText(`click anywhere to add a node`, 5, canvas.height-30)
+    } else {
         ctx.fillText(`click a node to remove it`, 5, canvas.height-30);
+    }
+    if(points.length>10){
+        ctx.fillText(`sorry max of 10 nodes :(`, 200, 20);
     }
     
 
