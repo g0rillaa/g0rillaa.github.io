@@ -1,4 +1,10 @@
-function addAlbumTest(albumData){
+function addAllAlbums(albums){
+    albums.forEach(a => {
+        addAlbum(a)
+    })
+}
+
+function addAlbum(albumData){
     var container = $('#albumsContainer')
     var album = $('<div>', {
         class: 'albumContainer',
@@ -22,7 +28,7 @@ function addAlbumTest(albumData){
     }).appendTo(album);
     albumData.photoSrcs.forEach(photo => {
         var img = $('<img>', {
-            src: `./photos/${photo}-min.jpg`,
+            src: `https://test.gorillaa.net/photolib/${albumData.path}/${photo}-min.jpg`,
             class: 'showcaseImg'
         }).appendTo(photos);
         img.click(() => {
