@@ -1,0 +1,32 @@
+h1 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen Mono', monospace;
+    font-weight: 800;
+    color: rgb(201, 34, 34);
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen Mono', monospace;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(201, 34, 34);
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen Mono', monospace;
+    font-weight: 800;
+    color: rgb(201, 34, 34);
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen Mono', monospace;
+    font-weight: 300;
+    color: rgb(201, 34, 34);
+}
