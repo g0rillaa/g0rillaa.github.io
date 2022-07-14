@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Mostly car photography, organised into albums.">
+  <meta name="theme-color" content="#c92222">
+  <title>Zoran's Camera - Album</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="../scripts/http.js"></script>
+  <script src="../scripts/albumArrange.js"></script>
+  <script src="../scripts/enlargeImage.js"></script>
+  <script src='../scripts/albumMain.js'></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/misc.css">
+  <link rel="stylesheet" type="text/css" href="../css/font.css">
+  <link rel="stylesheet" type="text/css" href="../css/topbar.css">
+  <link rel="stylesheet" type="text/css" href="../css/enlargeImage.css">
+  <link rel="stylesheet" type="text/css" href="../css/albumPage.css">
+</head>
+
+<body>
+  <div id="topbar">
+    <a id="topbarBack" href="https://gorillaa.net/photos">&#8592;</a>
+    <h1 id="topbarTxt">zoranscamera</h1>
+    <input id="topbarSearchbox" type="text" placeholder="Search">
+    <a id="topbarIG" href="https://instagram.com/zoranscamera" target="_blank"><img src="../assetts/ig.png"></img></a>
+  </div>
+
+  <div id="albumContainer">
+    <h1 id="albumTitle"></h1>
+    <h1 id="albumDate"></h1>
+    <h2 id="albumLocation"></h2>
+    <div id="albumPhotosContainer">
+        
+    </div>
+  </div>
+
+  <div id="albumNotFoundContainer">
+    <h1>Album not found</h1>
+    <a id="topbarBack" href="https://gorillaa.net/photos">&#8592;</a>
+  </div>
+
+  <div id="enlargedImgBack">
+    <div id="enlargedImgContainerX" onclick="enlargedImgContainerClose()">
+        <h1>X</h1>
+    </div>
+    <img id="enlargedImg" src="">
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,20 @@
+var currentAlbum = {}
+var loadIntoImg = true
+
+$(document).ready(function() {
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    var albID = urlParams.get('a')
+    var imgID = urlParams.get('i')
+    if(imgID==null || imgID==''){
+        loadIntoImg = false
+    }
+    getAlbum(albID)
+    if(loadIntoImg){
+        enlargeImage(imgID)
+    }
+});
+
+function showAlbumNotFound(){
+    $('#albumNotFoundContainer').css('visibility', 'visible')
+}

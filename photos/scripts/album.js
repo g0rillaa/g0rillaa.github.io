@@ -17,7 +17,8 @@ function addAlbum(albumData){
         html: albumData.title,
     }).appendTo(header);
     title.click(() => {
-        window.open(`https://gorillaa.net/photos/album/${albumData.path}`)
+        window.open(`https://gorillaa.net/photos/album?a=${albumData.path}`)
+        //window.open(`http://localhost/photos/album?a=${albumData.path}`)
     })
     $('<h2>', {
         class: 'albumDate',
@@ -28,11 +29,12 @@ function addAlbum(albumData){
     }).appendTo(album);
     albumData.photoSrcs.forEach(photo => {
         var img = $('<img>', {
-            src: `https://test.gorillaa.net/photolib/${albumData.path}/${photo}-min.jpg`,
+            src: `${imgUrl}default/${photo}-min.jpg`,
             class: 'showcaseImg'
         }).appendTo(photos);
         img.click(() => {
-            window.open(`https://gorillaa.net/photos/album/${albumData.path}`)
+            window.open(`https://gorillaa.net/photos/album?a=${albumData.path}&i=${photo}`)
+            //window.open(`http://localhost/photos/album?a=${albumData.path}&i=${photo}`)
         })
     })
 }
