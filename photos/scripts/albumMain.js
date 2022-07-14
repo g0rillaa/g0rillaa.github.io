@@ -17,4 +17,5 @@ $(document).ready(function() {
 
 function showAlbumNotFound(){
     $('#albumNotFoundContainer').css('visibility', 'visible')
+    enlargedImgContainerClose()
 }
