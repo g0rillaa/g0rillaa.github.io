@@ -3,6 +3,7 @@ html, body{
     margin: 0px;
     padding: 0px;
     height: 1000px;
+    text-align: center;
 }
 #top{
     text-align: center;
@@ -22,6 +23,11 @@ html, body{
 h1{
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
+}
+a{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
 }
 #bottom{
     background-color: rgb(27, 27, 27);
