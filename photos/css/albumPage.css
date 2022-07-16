@@ -8,6 +8,7 @@
 #albumTitle {
     display: inline-flex;
     float: left;
+    font-size: 30px;
 }
 #albumDate {
     display: inline-flex;

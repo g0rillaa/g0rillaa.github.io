@@ -12,17 +12,19 @@
 }
 
 #enlargedImgContainerX {
-    width: 100%;
+    width: 40px;
+    margin-top: 10px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 #enlargedImgContainerX:hover {
     cursor: pointer;
 }
 
 #enlargedImg {
-    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-}
+  }

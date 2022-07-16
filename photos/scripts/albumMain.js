@@ -13,9 +13,20 @@ $(document).ready(function() {
     if(loadIntoImg){
         enlargeImage(imgID)
     }
+    setTimeout(() => {
+        resizeEnlargedImage()
+        setTimeout(() => {
+            resizeEnlargedImage()
+        },200)
+    },200)
 });
 
 function showAlbumNotFound(){
     $('#albumNotFoundContainer').css('visibility', 'visible')
     enlargedImgContainerClose()
 }
+
+
+$(window).resize(function() {
+    resizeEnlargedImage()
+});
