@@ -29,7 +29,7 @@ function addAlbum(albumData){
     }).appendTo(album);
     albumData.photoSrcs.forEach(photo => {
         var img = $('<img>', {
-            src: `${imgUrl}default/${photo}-min.jpg`,
+            src: `${imgUrl}${albumData.path}/${photo}-min.jpg`,
             class: 'showcaseImg'
         }).appendTo(photos);
         img.click(() => {

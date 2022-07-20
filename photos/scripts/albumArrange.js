@@ -8,7 +8,7 @@ function addPageAlbum(album){
     var photosContainer = $('#albumPhotosContainer')
     album.photoSrcs.forEach(photo => {
         var img = $('<img>', {
-            src: `${imgUrl}default/${photo}-min.jpg`,
+            src: `${imgUrl}${album.path}/${photo}-min.jpg`,
             class: 'image'
         }).appendTo(photosContainer);
         img.click(() => {
