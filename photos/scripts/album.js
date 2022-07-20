@@ -33,8 +33,8 @@ function addAlbum(albumData){
             class: 'showcaseImg'
         }).appendTo(photos);
         img.click(() => {
-            window.open(`https://gorillaa.net/photos/album?a=${albumData.path}&i=${photo}`)
-            //window.open(`http://localhost/photos/album?a=${albumData.path}&i=${photo}`)
+            window.location.assign(`https://gorillaa.net/photos/album?a=${albumData.path}&i=${photo}`)
+            window.location.assign(`http://localhost/photos/album?a=${albumData.path}&i=${photo}`)
         })
     })
 }

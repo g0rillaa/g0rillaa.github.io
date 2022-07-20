@@ -2,6 +2,7 @@ function addPageAlbum(album){
     $('#albumTitle').html(album.title)
     if(album.urlLink!==''){
         $('#albumTitle').attr(`href`, album.url)
+        $('#albumTitle').attr(`target`, `_blank`)
     }
     $('#albumDate').html(album.date)
     $('#albumLocation').html(album.location)
