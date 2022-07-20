@@ -34,7 +34,7 @@ function addAlbum(albumData){
         }).appendTo(photos);
         img.click(() => {
             window.location.assign(`https://gorillaa.net/photos/album?a=${albumData.path}&i=${photo}`)
-            window.location.assign(`http://localhost/photos/album?a=${albumData.path}&i=${photo}`)
+            //window.location.assign(`http://localhost/photos/album?a=${albumData.path}&i=${photo}`)
         })
     })
 }
