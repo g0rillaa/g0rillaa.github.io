@@ -15,7 +15,6 @@ var xmlHttp = new XMLHttpRequest();
 xmlHttp.onreadystatechange = function() { 
     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
         var r = JSON.parse(xmlHttp.responseText)
-        console.log(r)
         if(r.msg=='all-albums'){
             albums = r.data
             albums.sort((a, b) => {

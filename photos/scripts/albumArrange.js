@@ -1,6 +1,8 @@
 function addPageAlbum(album){
     $('#albumTitle').html(album.title)
-    $('#albumTitle').attr(`href`, 'https://instagram.com')
+    if(album.urlLink!==''){
+        $('#albumTitle').attr(`href`, album.urlLink)
+    }
     $('#albumDate').html(album.date)
     $('#albumLocation').html(album.location)
     var photosContainer = $('#albumPhotosContainer')
