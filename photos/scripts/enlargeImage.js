@@ -2,7 +2,7 @@ function enlargeImage(id){
     $('#enlargedImgBack').css('opacity', '100%')
     $('#enlargedImgBack').css('pointer-events', 'all')
     $('body').css('overflow-y', 'hidden')
-    var img = $("#enlargedImg").attr("src",`${imgUrl}default/${id}-min.jpg`);
+    var img = $("#enlargedImg").attr("src",`${imgUrl}${album.path}t/${id}-min.jpg`);
     resizeEnlargedImage()
     img.onload = resizeEnlargedImage()
 }
