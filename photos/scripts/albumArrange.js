@@ -1,7 +1,7 @@
 function addPageAlbum(album){
     $('#albumTitle').html(album.title)
     if(album.urlLink!==''){
-        $('#albumTitle').attr(`href`, album.urlLink)
+        $('#albumTitle').attr(`href`, album.url)
     }
     $('#albumDate').html(album.date)
     $('#albumLocation').html(album.location)
