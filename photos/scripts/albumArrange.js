@@ -13,7 +13,7 @@ function addPageAlbum(album){
             class: 'image'
         }).appendTo(photosContainer);
         img.click(() => {
-            enlargeImage(`${photo}`)
+            enlargeImage(album.path, `${photo}`)
         })
     })
 }

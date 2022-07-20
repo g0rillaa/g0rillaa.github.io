@@ -1,8 +1,8 @@
-function enlargeImage(id){
+function enlargeImage(alb, id){
     $('#enlargedImgBack').css('opacity', '100%')
     $('#enlargedImgBack').css('pointer-events', 'all')
     $('body').css('overflow-y', 'hidden')
-    var img = $("#enlargedImg").attr("src",`${imgUrl}${currentAlbum.path}/${id}-min.jpg`);
+    var img = $("#enlargedImg").attr("src",`${imgUrl}${alb}/${id}-min.jpg`);
     resizeEnlargedImage()
     img.onload = resizeEnlargedImage()
 }

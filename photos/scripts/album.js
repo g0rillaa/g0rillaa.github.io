@@ -17,8 +17,8 @@ function addAlbum(albumData){
         html: albumData.title,
     }).appendTo(header);
     title.click(() => {
-        window.open(`https://gorillaa.net/photos/album?a=${albumData.path}`)
-        //window.open(`http://localhost/photos/album?a=${albumData.path}`)
+        window.location.assign(`https://gorillaa.net/photos/album?a=${albumData.path}`)
+        //window.location.assign(`http://localhost/photos/album?a=${albumData.path}`)
     })
     $('<h2>', {
         class: 'albumDate',

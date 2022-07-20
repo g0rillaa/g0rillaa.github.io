@@ -2,7 +2,6 @@ var currentAlbum = {}
 var loadIntoImg = true
 
 $(document).ready(function() {
-    
     const urlParams = new URLSearchParams(window.location.search);
     var albID = urlParams.get('a')
     var imgID = urlParams.get('i')
@@ -11,7 +10,7 @@ $(document).ready(function() {
     }
     getAlbum(albID)
     if(loadIntoImg){
-        enlargeImage(imgID)
+        enlargeImage(albID, imgID)
     }
     setTimeout(() => {
         resizeEnlargedImage()
