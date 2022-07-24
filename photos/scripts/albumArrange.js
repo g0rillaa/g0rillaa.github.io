@@ -17,3 +17,4 @@ function addPageAlbum(album){
         })
     })
 }
+

@@ -20,6 +20,7 @@ xmlHttp.onreadystatechange = function() {
             albums.sort((a, b) => {
                 return b.order - a.order;
             });
+
             addAllAlbums(albums)
         }
         if(r.msg=='get-album'){

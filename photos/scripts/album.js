@@ -1,7 +1,13 @@
-function addAllAlbums(albums){
-    albums.forEach(a => {
-        addAlbum(a)
-    })
+function addAllAlbums(){
+    for(var i=0; i<3; i++){
+        loadNextAlbum()
+    }
+}
+
+function loadNextAlbum(){
+    if(albumNum==albums.length){return}
+    addAlbum(albums[albumNum])
+    albumNum++
 }
 
 function addAlbum(albumData){
